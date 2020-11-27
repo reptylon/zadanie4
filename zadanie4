@@ -1,0 +1,21 @@
+from random import randint
+import time
+long_list = [randint(0, 3000) for element in range(1000000)]
+
+#1 Sposob
+start = time.time()
+if -1 in long_list :
+    print("-1 znajduje sie na tej liscie")
+else:
+    print("-1 nie znajduje sie na tej liscie")
+end = time.time()
+print("Operacja trwala: ", end - start, " sekund")
+
+#2 Sposob
+start = time.time()
+if long_list.count(-1) > 0 :
+    print("-1 znajduje sie na tej liscie")
+else:
+    print("-1 nie znajduje sie na tej liscie")
+end = time.time()
+print("Operacja trwala: ", end - start, " sekund")
